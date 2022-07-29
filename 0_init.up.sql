@@ -1,11 +1,10 @@
 CREATE TABLE orders(
-    id  SERIAL PRIMARY KEY,
     order_uid varchar(40) NOT NULL,
 	track_number varchar(40) NOT NULL,
 	entry varchar(40) NOT NULL,
 	delivery integer,
 	payment integer,
-	items integer[],
+	items text[],
 	locale varchar(40) NOT NULL,
 	internal_signature varchar(40) NOT NULL,
 	customer_id varchar(40) NOT NULL,
@@ -17,7 +16,7 @@ CREATE TABLE orders(
 );
 
 CREATE TABLE delivery(
-    id  SERIAL PRIMARY KEY,
+    uuid  varchar(40) NOT NULL,
     name varchar(40) NOT NULL,
 	phone varchar(40) NOT NULL,
 	zip varchar(40) NOT NULL,
@@ -28,7 +27,7 @@ CREATE TABLE delivery(
 );
 
 CREATE TABLE payment(
-    id  SERIAL PRIMARY KEY,
+    uuid  varchar(40) NOT NULL,
     transaction varchar(40) NOT NULL,
 	request_id varchar(40) NOT NULL,
 	currency varchar(40) NOT NULL,
@@ -42,7 +41,7 @@ CREATE TABLE payment(
 );
 
 CREATE TABLE items(    
-    id  SERIAL PRIMARY KEY,
+    uuid  varchar(40) NOT NULL,
     chrt_id integer,
 	track_number varchar(40) NOT NULL,
 	price integer,

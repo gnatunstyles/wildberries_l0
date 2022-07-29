@@ -18,7 +18,9 @@ type Order struct {
 	DateCreated       string   `json:"date_created"`
 	OofShard          string   `json:"oof_shard"`
 }
+
 type Delivery struct {
+	Uuid    int64
 	Name    string `json:"name"`
 	Phone   string `json:"phone"`
 	Zip     string `json:"zip"`
@@ -27,7 +29,9 @@ type Delivery struct {
 	Region  string `json:"region"`
 	Email   string `json:"email"`
 }
+
 type Payment struct {
+	Uuid         int64
 	Transaction  string `json:"transaction"`
 	RequestId    string `json:"request_id"`
 	Currency     string `json:"currency"`
@@ -41,6 +45,7 @@ type Payment struct {
 }
 
 type Item struct {
+	Uuid        int64
 	ChrtId      int64  `json:"chrt_id"`
 	TrackNumber string `json:"track_number"`
 	Price       int64  `json:"price"`
