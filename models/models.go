@@ -20,7 +20,7 @@ type Order struct {
 }
 
 type Delivery struct {
-	Uuid    int64
+	Uuid    int64  `json:"-"`
 	Name    string `json:"name"`
 	Phone   string `json:"phone"`
 	Zip     string `json:"zip"`
@@ -31,7 +31,7 @@ type Delivery struct {
 }
 
 type Payment struct {
-	Uuid         int64
+	Uuid         int64  `json:"-"`
 	Transaction  string `json:"transaction"`
 	RequestId    string `json:"request_id"`
 	Currency     string `json:"currency"`
@@ -45,7 +45,7 @@ type Payment struct {
 }
 
 type Item struct {
-	Uuid        int64
+	Uuid        int64  `json:"-"`
 	ChrtId      int64  `json:"chrt_id"`
 	TrackNumber string `json:"track_number"`
 	Price       int64  `json:"price"`

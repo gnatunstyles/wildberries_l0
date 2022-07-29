@@ -2,8 +2,8 @@ CREATE TABLE orders(
     order_uid varchar(40) NOT NULL,
 	track_number varchar(40) NOT NULL,
 	entry varchar(40) NOT NULL,
-	delivery integer,
-	payment integer,
+	delivery varchar(40) NOT NULL,
+	payment varchar(40) NOT NULL,
 	items text[],
 	locale varchar(40) NOT NULL,
 	internal_signature varchar(40) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE orders(
 	delivery_service varchar(40) NOT NULL,
 	shardkey varchar(40) NOT NULL,
 	sm_id integer,
-	date_created timestamp,
+	date_created varchar(40) NOT NULL,
 	oof_shard varchar(40) NOT NULL
 );
 
